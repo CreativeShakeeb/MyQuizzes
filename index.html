@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test your knowledge | My Quizzes</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/logos/darkIcon.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100">
+
+    <section class="main-section w-full p-4 md:p-8">
+        <div class="app-name h-14 flex justify-between items-center p-4 bg-white shadow-md rounded-lg mb-8">
+            <div class="flex w-40 justify-around items-center">
+                <img class="h-8 w-8 rounded-full" src="img/logos/darkIcon.png" alt="">
+                <p class="text-lg font-bold">My Quizz App</p>
+            </div>
+            <button class="button bg-dark-blue rounded p-2">
+                <a href="/about.html">
+                    <p class="text-white">About us</p>
+                </a>
+            </button>
+        </div>
+
+        <!-- Category Section -->
+        <div id="category-screen" class="quizz-category-section w-full md:w-3/4 m-auto mt-8 flex flex-col">
+            <h2 class="text-2xl font-bold text-center mb-4">Quizzes category:</h2>
+            <div class="category-box h-auto md:h-96 w-full bg-box mt-6 p-6 rounded-2xl shadow-md overflow-hidden">
+                <div id="difficulty-buttons" class="level flex justify-around w-full mb-4">
+                    <button class="bg-dark-blue rounded-xl px-5 py-2 text-white bg-green-500">Easy</button>
+                    <button class="bg-dark-blue rounded-xl px-5 py-2 text-white">Medium</button>
+                    <button class="bg-dark-blue rounded-xl px-5 py-2 text-white">Hard</button>
+                </div>
+
+                <span id="loader" class="loader hidden"></span>
+                <div id="categories-tab" class="categories flex flex-col overflow-y-auto h-80">
+                    <!-- Categories are being added through JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Questions Section -->
+        
+        <div id="quiz-screen" class="quizzes-section w-full md:w-3/4 hidden m-auto mt-8 flex flex-col">
+            <div class="timer-container flex justify-end mb-4">
+                <div class="flex items-center justify-center timer bg-dark-blue h-20 w-20 rounded-full">
+                    <p id="timer" class="text-white text-4xl">30</p>
+                </div>
+            </div>
+            <div class="questions-section flex flex-col md:flex-row items-center">
+                <div class="h-auto md:h-96 w-full bg-box p-6 rounded-2xl shadow-md mb-6 md:mb-0">
+                    <div class="question h-20 max-h-36 w-full flex rounded-md bg-dark-blue justify-center text-center items-center mb-4 p-4 ">
+                        <p id="quiz-title" class=" h-20 question text-white mt-2 text-center break-words ">Sample question text</p>
+                    </div>                    
+                    <div id="answer-buttons" class="questions flex flex-col overflow-y-auto h-60">
+                        <!-- Answer buttons are being added through JavaScript -->
+                    </div>
+                </div>
+                <div class="next flex justify-center md:justify-start md:ml-6 mt-4 md:mt-0">
+                    <div id="next-btn" class="next-button bg-dark-blue mb-12 h-14 w-14 rounded-full flex items-center justify-center">
+                        <img src="img/next.svg" alt="Next">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Result Section -->
+        <div id="result-screen" class="result-section hidden w-full md:w-3/4 m-auto mt-8 flex flex-col">
+            <h2 class="text-2xl font-bold text-center mb-4">Result:</h2>
+            <div class="category-box h-auto md:h-96 w-full bg-box mt-6 p-6 rounded-2xl shadow-md flex justify-center items-center">
+                <div class="categories flex flex-col items-center">
+                    <div class="mb-6">
+                        <p class="text-lg font-bold">Score:</p>
+                        <div class="category flex w-20 h-16 rounded-md bg-dark-blue justify-center items-center m-auto">
+                            <p id="result" class="text-white text-2xl">5</p>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-lg font-bold">Percentage:</p>
+                        <div class="category flex w-20 h-16 rounded-md bg-dark-blue justify-center items-center m-auto">
+                            <p id="Percentage" class="text-white text-2xl">50%</</p>
+                        </div>
+                    </div>
+                    <div  class="category flex w-20 h-16 rounded-md border bg-dark-blue mt-8 justify-center items-center m-auto p-2" >
+                        <p id="restart" class="text-white text-2xl cursor-pointer "> Restart</p>
+
+                    </div>
+                </div>
+            </div>
+            <p class="w-full text-center mt-4">Reload the page to go back</p>
+        </div>
+    </section>
+
+    <footer class="w-full flex h-10 items-center justify-center bg-dark-blue">
+        <p class="text-white">All rights reserved &copy; Developed by Shakeeb</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
